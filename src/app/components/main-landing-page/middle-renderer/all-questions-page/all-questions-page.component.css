@@ -1,0 +1,176 @@
+.input-group {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+}
+
+.link-inside {
+  position: absolute;
+  color: black;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.form-control {
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  /*max-width: 100%;*/
+  padding: 0 1rem;
+  /*margin: 1vw;*/
+}
+
+.card {
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 100%;
+  /*max-width: 40rem; !* Adjust maximum width as needed *!*/
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+  /*border-radius: 1rem;*/
+}
+
+/*.card-content {*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*}*/
+
+.thumbs {
+  position: relative;
+  width: 100%;
+  max-width: 50%;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.card-text {
+  flex: 1;
+  margin: 0.5rem;
+}
+
+.card-text a {
+  text-decoration: none;
+}
+
+.card-text h1 a {
+  color: black;
+  font-weight: bold;
+}
+
+.card-text h1 a:hover {
+  color: orangered;
+  transition: 1s ease-in-out;
+}
+
+.card-text p {
+  font-size: 1vw;
+  font-weight: bold;
+  color: darkgray;
+}
+
+
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+.info-row h5 strong a {
+  color: black;
+}
+
+.info-row h5 strong a:hover {
+  color: orangered;
+  transition: 1s ease-in-out;
+}
+
+.info-row h5 a {
+  color: orangered;
+  font-weight: bold;
+}
+
+
+.info-row a:hover {
+  color: orangered;
+  transition: 1s ease-in-out;
+}
+
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.bottom-row a {
+  color: gray;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem -0.5rem;
+}
+
+.tags a {
+  margin: 0.5rem;
+  color: gray;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: 0.1rem solid lightgrey;
+  font-weight: bold;
+  font-size: 0.8vw;
+}
+
+.tags a:hover {
+  color: orangered;
+  border: 0.1rem solid orangered;
+  background-color: lightyellow;
+  transition: 1s ease-in-out;
+}
+
+.bottom-row a {
+  margin: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9vw;
+}
+
+.right-bottom a {
+  padding: 0.3rem;
+  border: 0.1rem solid darkgray;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.right-bottom a:first-child:hover {
+  color: green;
+  border: 0.1rem solid green;
+  background-color: lightyellow;
+  transition: 1s ease-in-out;
+  cursor: pointer;
+}
+
+.right-bottom a:last-child:hover {
+  color: darkred;
+  border: 0.1rem solid darkred;
+  background-color: lightyellow;
+  transition: 1s ease-in-out;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .thumbs {
+    max-width: 100%;
+  }
+}
+
+.answer-panel {
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
+}

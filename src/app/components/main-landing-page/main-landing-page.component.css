@@ -1,0 +1,212 @@
+.mat-mdc-progress-bar {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  --mdc-linear-progress-active-indicator-color: orangered;
+}
+
+.home-image .home-content{
+  height: 100vh;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  z-index: 9999;
+}
+
+.home-image .home-content h1 {
+  font-size: 5vw;
+  width: 100%;
+  line-height: 15vw;
+  font-weight: bold;
+  background-image: url("/assets/home/heading-background.jpeg");
+  background-clip: text; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: center;
+  animation: moveBackground 5s linear infinite
+}
+
+@keyframes moveBackground {
+  50% {
+    background-size: 150%;
+  }
+  100% {
+    background-size: 200%;
+  }
+}
+
+.home-image .home-content h3 {
+  font-size: 2vw;
+  color: #676767;
+  margin-top: -5vw;
+  margin-left: 0.5rem;
+  margin-bottom: 8vw;
+}
+
+.home-image .home-content h3 span {
+  color: orangered;
+}
+
+.home-image .home-content p {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin-left: 0.5rem;
+  width: 60%;
+  margin-bottom: 8vw;
+}
+
+.home-image .home-content a {
+  font-size: 1.2vw;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: white;
+  background-color: orangered;
+  border-radius: 0.4rem;
+  z-index: 9999;
+}
+
+.home-image .home-content a:hover {
+  background-color: black;
+  z-index: 9999;
+}
+
+
+  /*=================================================>[Image Settings]<=================================================*/
+
+  .home-image {
+    display: flex;
+    flex-direction: row;
+    margin-top: 7vw;
+    width: 100%;
+    height: auto; /* Use auto for height to maintain aspect ratio */
+    background-color: #e9fffa;
+    position: relative;
+    z-index: 999;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .home-image .person {
+    top: 26%;
+    left: 52%;
+    width: 48%;
+    margin-left: auto;
+    position: absolute;
+    z-index: 4;
+  }
+  
+  .home-image .shape-1,
+  .home-image .shape-2,
+  .home-image .shape-3,
+  .home-image .shape-4 {
+    position: absolute;
+    margin-left: auto;
+    z-index: 2;
+  }
+  
+  .home-image .shape-1 {
+    top: 27%;
+    right: 40%;
+    animation: shape-bounce 5s linear infinite;
+  }
+  
+  .home-image .shape-2 {
+    top: 50%;
+    right: 27%;
+    width: 15%;
+    height: 20%;
+    animation: rotate360 40s linear infinite;
+  }
+  
+  .home-image .shape-3 {
+    top: 45%;
+    right: 2%;
+    animation: shape-bounce 5s linear infinite;
+  }
+  
+  .home-image .shape-4 {
+    top: 75%;
+    right: 0;
+    animation: shape-bounce 5s linear infinite;
+  }
+  
+  @keyframes shape-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes rotate360 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .home-image .person-background {
+    top: 6%;
+    right: 0;
+    width: 50%;
+    margin-left: auto;
+    position: absolute;
+    z-index: 3;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .home-image {
+      flex-direction: column; /* Stack elements vertically on small screens */
+      align-items: center; /* Center items */
+    }
+  
+    .home-image .person,
+    .home-image .shape-1,
+    .home-image .shape-2,
+    .home-image .shape-3,
+    .home-image .shape-4 {
+      width: 80%; /* Adjust width to fit smaller screens */
+      top: auto; /* Reset top to avoid overlap */
+      right: auto; /* Reset right to center images */
+    }
+  
+    .home-image .person {
+      margin: 0; /* Reset margin */
+    }
+  
+    .home-image .shape-2 {
+      height: auto; /* Allow shape-2 to scale proportionally */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .home-image .shape-2 {
+      width: 50%; /* Further adjust shape-2 size for smaller screens */
+    }
+  
+    .home-image h1,
+    .home-image h3,
+    .home-image p {
+      text-align: center; /* Center text for better readability */
+    }
+  }
+
+/*=================================================>[Main Content Settings]<=================================================*/
+
+.main-content {
+  padding-top: 7rem;
+}
+
+.rightsidebar{
+  padding-top: 100px;
+  z-index: -1;
+}

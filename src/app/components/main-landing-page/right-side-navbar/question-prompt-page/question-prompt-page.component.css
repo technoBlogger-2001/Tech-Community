@@ -1,0 +1,117 @@
+.card{
+  margin: 1rem;
+}
+
+.mb-3 {
+  margin: 1vw;
+  padding-bottom: 20px;
+}
+
+.form-label{
+  font-size: 1.2rem;
+  color: darkgray;
+  padding-bottom: 0.5vw;
+  margin: 0;
+}
+
+.form-control {
+  padding: 15px;
+  color: black;
+  margin: 0;
+}
+
+/* Example: Customizing option styles */
+.mat-option {
+  background-color: lightblue; /* Change background color */
+  color: black; /* Change font color */
+}
+
+.mat-option:hover {
+  background-color: lightgreen; /* Add hover effect */
+}
+
+
+.ng-star-inserted{
+  margin-right: 0.9vw !important;
+  margin-left: -0.9vw !important;
+  margin-top: 0.9vw !important;
+}
+
+.tox-tinymce:active {
+  z-index: -1 !important;
+}
+
+.btn{
+  text-transform: none;
+  width: 100%;
+  padding: 1vw;
+  border: 0.1rem solid lightgrey;
+  display: flex;
+  background-color: lightgrey;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  border-radius: 1vw;
+}
+
+.dropdown-icon {
+  margin-left: auto;
+}
+
+.btn:hover {
+  background-color: darkgrey;
+  color: white;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+
+.attachments ul li {
+  padding: 0.5vw;
+  font-size: 1.2rem;
+}
+
+.custom-file-upload {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 1vw;
+}
+
+.upload-icon {
+  margin-right: 5px; /* Adjust spacing between icon and text */
+}
+
+
+#upload {
+  padding: 1vw;
+  text-transform: none;
+  background-color: lightgrey;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#upload:hover {
+  color: orangered;
+}
+
+#submit{
+  text-transform: none;
+  background-color: orangered;
+  color: whitesmoke;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#submit:hover{
+  background-color: black;
+}
+
+

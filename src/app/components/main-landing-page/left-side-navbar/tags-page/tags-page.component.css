@@ -1,0 +1,58 @@
+.card {
+  display: inline-block;
+  margin: 1.7rem;
+  border-radius: 0;
+}
+
+.card:hover {
+  border-color: orangered;
+}
+
+.mat-icon {
+  font-size:  1.0rem;
+  vertical-align: middle;
+  color: orangered;
+}
+
+.card-title {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.1rem;
+  font-size: 0.8rem;
+  background-color: white;
+  border: 0.1rem solid lightgrey;
+  border-radius: 0.4rem;
+}
+
+.card-subtitle {
+  display: inline-block;
+  vertical-align: middle;
+
+  margin-left: 3rem;
+  font-size: 0.8rem;
+}
+
+.card-text {
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+.card-link {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  background-color: darkgray;
+  border-radius: 5px;
+}
+
+#follow-button {
+  background-color: black;
+  color: whitesmoke;
+  margin-left: 4rem;
+}
+
+.card-link:hover,
+#follow-button:hover{
+  background-color: orangered;
+  color: whitesmoke;
+}

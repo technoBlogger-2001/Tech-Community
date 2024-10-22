@@ -1,0 +1,54 @@
+<mat-progress-bar *ngIf="loaderService.isLoading" mode="determinate" [value]="loaderService.progressValue"></mat-progress-bar>
+<app-top-navbar></app-top-navbar>
+
+<div class="home-image">
+  <div class="home-content">
+    <h1>BFL Community</h1>
+    <h3>Share & grow the world's <span>knowledge</span>!</h3>
+    <p>We want to connect with people who will share their knowledge from one person to another.</p>
+<!--    <a href="#">Create a Free Team</a>-->
+  </div>
+  <img src="assets/home/person.png" class="img-responsive person ">
+  <img src="assets/home/shape-6.png" class="img-responsive person-background">
+  <img src="assets/home/shape-1.png" class="img-responsive shape-1">
+  <img src="assets/home/shape-2.png" class="img-responsive shape-2">
+  <img src="assets/home/shape-3.png" class="img-responsive shape-3">
+  <img src="assets/home/shape-4.png" class="img-responsive shape-4">
+
+</div>
+
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-lg-3">
+          <app-left-side-navbar></app-left-side-navbar>
+      </div>
+
+      <ng-container *ngIf="!userProfileService.isUserProfileVisible">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-md-12">
+            <app-middle-renderer></app-middle-renderer>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <app-right-side-navbar></app-right-side-navbar>
+      </div>
+    </ng-container>
+
+      <ng-container *ngIf="userProfileService.isUserProfileVisible">
+        <div class="col-lg-9">
+          <div class="row">
+            <div class="col-md-12">
+              <app-middle-renderer></app-middle-renderer>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+    </div>
+  </div>
+</div>

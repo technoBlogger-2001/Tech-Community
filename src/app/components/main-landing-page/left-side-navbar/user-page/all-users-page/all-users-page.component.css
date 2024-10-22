@@ -1,0 +1,46 @@
+.card {
+  margin: 1.7rem;
+  display: inline-block;
+}
+
+.card-body {
+  display: flex;
+}
+
+.card-body img {
+  flex-shrink: 0;
+  width: 35%;
+  height: auto;
+  border-radius: 10%;
+  margin-right: 1rem;
+}
+
+.card-body h2,
+.card-body h5 {
+  margin: 0;
+}
+
+.card p {
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.card span {
+  margin-left: 5rem;
+}
+
+.card span a {
+  text-decoration: none;
+  font-size: 1rem;
+  background-color: orangered;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 10%;
+}
+
+.card span a:hover {
+  background-color: black;
+}
+
+
+

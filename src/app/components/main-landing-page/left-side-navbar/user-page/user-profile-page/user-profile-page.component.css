@@ -1,0 +1,109 @@
+.user-profile-content {
+  display: flex;
+}
+
+.user-profile-content a {
+  text-decoration: none;
+  background-color: orangered;
+  color: white;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.user-profile-content a:hover {
+  background-color: black;
+}
+
+.top-profile-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-profile-page img {
+  flex-shrink: 0;
+  width: 50%;
+}
+
+.top-profile-page h2,
+.top-profile-page h4 {
+  margin-left: 2rem;
+}
+
+.top-profile-page h4 {
+  color: darkgray;
+}
+
+.profile-achievements {
+  margin-top: 1rem;
+}
+
+.profile-tags-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-tags {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid darkgray;
+  margin: 0 0.5rem;
+}
+
+.profile-tags h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.self-info {
+  margin-top: 1rem;
+}
+
+.self-info h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.badges{
+  margin-top: 1rem;
+}
+
+.badges h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.badge-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping to new lines */
+}
+
+.badge-container .card {
+  width: 150px; /* Adjust the width as needed */
+  margin-right: 10px; /* Adjust spacing between badges */
+}
+
+.card {
+  display: inline-block;
+  text-align: center;
+}
+
+.card img {
+  width: 6rem;
+  height: 6rem;
+  padding: 0.6rem;
+}
+
+.top-tags {
+  margin-top: 1rem;
+}
+
+.top-tags h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+
+

@@ -1,0 +1,70 @@
+.container-fluid {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.question h1 {
+  font-weight: bold;
+}
+
+.top-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-details a {
+  margin-left: 0.5vw;
+}
+
+.top-details h5 strong a {
+  text-decoration: none;
+  color: black;
+}
+
+.top-details h5 strong a:hover {
+  color: orangered;
+  transition: 1s ease-in-out;
+}
+
+.top-details h5 a {
+  text-decoration: none;
+  color: orangered;
+}
+
+.main-content {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.profile-picture {
+  width: 50%;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.description {
+  margin-top: 1rem;
+}
+
+.answer {
+  margin-top: 1rem;
+}
+
+.form-label {
+  font-size: 1.2rem;
+}
+
+.text-area {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  margin-top: 1rem;
+}

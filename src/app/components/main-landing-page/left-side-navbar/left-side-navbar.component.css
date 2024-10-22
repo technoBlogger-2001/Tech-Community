@@ -1,0 +1,82 @@
+.sidebar {
+  padding-top: 10vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  box-shadow: 10px 10px 5px aliceblue;
+  padding: 0;
+}
+
+.sidebar ul li {
+  background-color: lightgrey;
+  margin-bottom: 5px;
+}
+
+.sidebar ul li a {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a:focus {
+  color: orangered;
+  border-left-color: black;
+}
+
+.sidebar ul li a.active {
+  color: orangered;
+  border-left-color: black;
+}
+
+
+.sidebar ul li a .down-arrow {
+  margin-left: auto;
+}
+
+.sidebar .mt-1 ul li {
+  background-color: lightgrey;
+  border-left: 2px solid #4d12ee;
+}
+
+
+
+.mt-1 ul li a{
+  margin-left: 3rem;
+}
+
+.sidebar .mt-1 ul li a:hover,
+.sidebar .mt-1 ul li a:focus {
+  color: #4d12ee;
+}
+
+.sidebar .mt-1 ul li:hover,
+.sidebar .mt-1 ul li:focus {
+  border-left-color: black !important;
+}
+
+.mt-1 mat-icon {
+  margin-right: 10px;
+  vertical-align: -5px;
+}
+
+.sidenavbar {
+  display: flex;
+  align-items: center;
+  border-left: 2px solid orangered;
+  text-decoration: none;
+  background-color: lightgray;
+  color: orangered;
+}
+
+.sidenavbar mat-icon {
+  margin-right: 10px;
+  vertical-align: -5px;
+}

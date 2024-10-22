@@ -1,0 +1,38 @@
+<app-alert *ngIf="alertService.isANswerAlertVisible"></app-alert>
+<div class="container-fluid">
+  <div class="card">
+    <div class="question">
+      <h1>{{ questionHeader.Title }}</h1>
+
+      <div class="description">
+        <p [innerHTML]="questionHeader.Description"></p>
+      </div>
+
+      <div class="top-details">
+        <h5><strong><img src="assets/users/user-1.jpeg" alt="..."><a href="#">Adam Garrison</a></strong></h5>
+        <h5>Latest Answer: {{ questionHeader.time_ago }}</h5>
+        <h5>In: <a href="#"><strong>{{ questionHeader.Category_Name }}</strong></a></h5>
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+
+    <form [formGroup]="submitForm" (ngSubmit)="FinalAnswerSubmit(); alertService.AnswerAddedAlert(); loaderService.NavigateToSelectedUrl('view-answer')">
+      <div class="answer">
+        <label class="form-label">Answer Writing Prompt</label>
+        <ckeditor
+          [config]="ckEditorConfig"
+          [(ngModel)]="ckeditorContent"
+          debounce="500"
+          formControlName="Answer"
+        ></ckeditor>
+        <div *ngIf="submitForm.get('Answer')?.invalid && (submitForm.get('Answer')?.dirty || submitForm.get('Answer')?.touched)" class="text-danger">
+          <div *ngIf="submitForm.get('Answer')?.errors?.['required']">Answer is required.</div>
+          <div *ngIf="submitForm.get('Answer')?.errors?.['maxlength']">Answer cannot exceed 500 characters.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+
+
+  </div>
+</div>

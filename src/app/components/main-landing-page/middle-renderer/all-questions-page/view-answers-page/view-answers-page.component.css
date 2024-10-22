@@ -1,0 +1,137 @@
+.container-fluid {
+  margin-top: 1rem;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.card {
+  padding: 1rem;
+}
+
+.top-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-details a {
+  margin-left: 0.5vw;
+}
+
+.top-details h5 strong a {
+  text-decoration: none;
+  color: black;
+}
+
+.top-details h5 strong a:hover {
+  color: orangered;
+  transition: 1s ease-in-out;
+}
+
+.top-details h5 a {
+  text-decoration: none;
+  color: orangered;
+}
+
+.question {
+  margin: 1vw;
+}
+
+.main-content {
+  display: inline-block;
+  /*margin-bottom: 1rem;*/
+}
+
+.profile-picture {
+  width: 50%;
+  margin-top: 1rem;
+
+}
+
+#tick {
+  width: 20%;
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 1vw;
+  font-weight: bold;
+  color: gray;
+}
+
+.mat-divider {
+  margin: 1vw;
+}
+
+.answer-description {
+  font-size: 1vw;
+}
+
+.mat-icon {
+  font-size: x-large;
+}
+
+.profile-picture {
+  display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  margin-left: 0.8rem;
+}
+
+.icon-container a {
+  color: black;
+}
+
+.icon-container p {
+  font-weight: bold;
+  color: gray;
+  text-align: center;
+}
+
+.approve-answer {
+  margin-top: 2vw;
+  justify-content: flex-end;
+}
+
+.button {
+  padding: 0.5vw;
+  background-color: green;
+  color: white;
+  border-radius: 0.2vw;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+
+a#up .mat-icon:first-child,
+a#down .mat-icon:first-child {
+  border: none;
+  transition: border-color 0.3s ease;
+}
+
+a#up:hover .mat-icon:first-child,
+a#up:focus .mat-icon:first-child{
+  color: green;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+}
+
+a#down:hover .mat-icon:first-child,
+a#down:focus .mat-icon:first-child {
+  color: darkred;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+

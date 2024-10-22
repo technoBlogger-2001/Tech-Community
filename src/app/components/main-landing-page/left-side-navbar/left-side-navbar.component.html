@@ -1,0 +1,85 @@
+
+    <!-- Left sidebar content goes here -->
+    <div class="sidebar">
+      <ul>
+        <li><a class="sidenavbar" (click)="loaderService.NavigateToSelectedUrl('#')"><mat-icon>home</mat-icon>Home</a></li>
+
+        <li><a
+          class="sidenavbar"
+          (click)="collapseQuestion.toggle(); isQuestionsCollapsed = !isQuestionsCollapsed"
+          role="button"
+          [attr.aria-expanded]="!isQuestionsCollapsed"
+          aria-controls="collapseQuestions"
+          [ngClass]="{'active': isQuestionsCollapsed}"
+        >
+          <mat-icon>help_outline</mat-icon>Questions<mat-icon class="down-arrow">keyboard_arrow_down</mat-icon>
+        </a></li>
+
+        <!--Collapsed Questions Content-->
+        <div class="mt-1" id="collapseQuestions" mdbCollapse #collapseQuestion="mdbCollapse">
+          <ul>
+            <li><a (click)="loaderService.NavigateToSelectedUrl('all-questions')">All Questions</a></li>
+            <li><a (click)="loaderService.NavigateToSelectedUrl('all-questions')">Questions Details</a></li>
+          </ul>
+        </div>
+
+        <li><a class="sidenavbar" (click)="loaderService.NavigateToSelectedUrl('communities')"><mat-icon>group</mat-icon>Communities</a></li>
+
+        <li><a
+          class="sidenavbar"
+          (click)="collapseMostAnswereds.toggle(); isMostAnsweredCollapsed = !isMostAnsweredCollapsed"
+          role="button"
+          [attr.aria-expanded]="!isMostAnsweredCollapsed"
+          aria-controls="collapseMostAnswered"
+          [ngClass]="{'active': isMostAnsweredCollapsed}"
+        >
+          <mat-icon>forum</mat-icon>Most Answered<mat-icon class="down-arrow">keyboard_arrow_down</mat-icon>
+        </a></li>
+
+        <!--Collapsed Questions Content-->
+        <div class="mt-1" id="collapseMostAnswered" mdbCollapse #collapseMostAnswereds="mdbCollapse">
+          <ul>
+            <li><a (click)="loaderService.NavigateToSelectedUrl('all-questions')"><mat-icon>trending_up</mat-icon>Most Answered</a></li>
+            <li><a (click)="loaderService.NavigateToSelectedUrl('all-questions')"><mat-icon>info</mat-icon>Most Answered Details</a></li>
+          </ul>
+        </div>
+
+        <li><a class="sidenavbar" (click)="loaderService.NavigateToSelectedUrl('all-questions')"><mat-icon>live_help</mat-icon>Unanswered</a></li>
+        <li><a class="sidenavbar" (click)="loaderService.NavigateToSelectedUrl('all-questions')"><mat-icon>remove_red_eye</mat-icon>Most Visited</a></li>
+        <li><a class="sidenavbar" (click)="loaderService.NavigateToSelectedUrl('all-questions')"><mat-icon>poll</mat-icon>Polls</a></li>
+        <li><a class="sidenavbar" (click)="loaderService.NavigateToSelectedUrl('faqs')"><mat-icon>high_quality</mat-icon>FAQs</a></li>
+        <li><a class="sidenavbar" (click)="loaderService.NavigateToSelectedUrl('groups')"><mat-icon>people</mat-icon>Groups</a></li>
+        <li><a class="sidenavbar" (click)="loaderService.NavigateToSelectedUrl('all-questions')"><mat-icon>book</mat-icon>Education</a></li>
+        <li><a class="sidenavbar" (click)="loaderService.NavigateToSelectedUrl('all-questions')"><mat-icon>developer_board</mat-icon>Technology</a></li>
+        <li><a class="sidenavbar" (click)="loaderService.NavigateToSelectedUrl('tags')"><mat-icon>local_offer</mat-icon>Tags</a></li>
+        <li><a class="sidenavbar" (click)="loaderService.NavigateToSelectedUrl('badges')"><mat-icon>badge</mat-icon>Badges</a></li>
+
+        <li><a
+          class="sidenavbar"
+          (click)="collapseUser.toggle(); isUserCollapsed = !isUserCollapsed"
+          role="button"
+          [attr.aria-expanded]="!isUserCollapsed"
+          aria-controls="collapseUsers"
+          [ngClass]="{'active': isUserCollapsed}"
+        >
+          <mat-icon>person</mat-icon>User<mat-icon class="down-arrow">keyboard_arrow_down</mat-icon>
+        </a></li>
+
+        <!--Collapsed Users Content-->
+        <div class="mt-1" id="collapseUsers" mdbCollapse #collapseUser="mdbCollapse">
+          <ul>
+            <li><a [routerLink]="'/all-users'">All User</a></li>
+            <li><a (click)="loaderService.NavigateToSelectedUrl('all-questions'); userProfileService.OpenUserProfilePage(); OpenUserProfile()">User Profile</a></li>
+            <li><a href="#" (click)="loaderService.NavigateToSelectedUrl('all-questions')">User</a></li>
+          </ul>
+        </div>
+
+      </ul>
+
+
+
+
+
+    </div>
+
+

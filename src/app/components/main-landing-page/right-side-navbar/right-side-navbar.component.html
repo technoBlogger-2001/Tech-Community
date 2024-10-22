@@ -1,0 +1,167 @@
+<div class="rightsidebar">
+  <div class="lastrow">
+    <div class="button-box">
+      <button
+        class="button"
+        (click)="loaderService.NavigateToSelectedUrl('question-prompt')"
+      >
+        Ask a question
+      </button>
+    </div>
+  </div>
+
+  <div class="lastrow">
+    <p class="inline-category">
+      <mat-icon class="sidebar-icon">view_list</mat-icon
+      ><strong>Categories</strong>
+    </p>
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Select Category
+        <mat-icon class="dropdown-icon">arrow_drop_down</mat-icon>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Select Category</a></li>
+        <li><a class="dropdown-item" href="#">Discussion</a></li>
+        <li><a class="dropdown-item" href="#">Language</a></li>
+        <li><a class="dropdown-item" href="#">Analytics</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lastrow">
+    <div class="discussions">
+      <p class="inline-category">
+        <mat-icon class="sidebar-icon">speaker</mat-icon
+        ><strong>Top Discussions</strong>
+      </p>
+      <ul *ngFor="let question of topDiscussions">
+        <li class="custom-item">
+          <strong>
+            <a
+              (click)="
+                OpenTopDiscussionBySelection(question);
+                loaderService.NavigateToSelectedUrl('view-answers')
+              "
+            >
+              {{ question.Title }}
+            </a>
+          </strong>
+        </li>
+        <mat-divider></mat-divider>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lastrow">
+    <span class="inline-category">
+      <mat-icon class="sidebar-icon">dashboard</mat-icon
+      ><strong>Dashboard</strong>
+    </span>
+    <div class="dashboard">
+      <div class="item">
+        <span><strong>Users</strong></span>
+        <span class="count"
+          ><strong>{{ dashboard.total_user_count[0].user_count }}</strong></span
+        >
+      </div>
+      <div class="item">
+        <span><strong>Questions</strong></span>
+        <span class="count"
+          ><strong>{{
+            dashboard.total_questions_count[0].Question_count
+          }}</strong></span
+        >
+      </div>
+      <div class="item">
+        <span><strong>Answers</strong></span>
+        <span class="count"
+          ><strong>{{
+            dashboard.total_answer_count[0].Answer_count
+          }}</strong></span
+        >
+      </div>
+      <div class="item">
+        <span><strong>Best Answers</strong></span>
+        <span class="count"
+          ><strong>{{
+            dashboard.total_approve_answer_count[0].Answer_count
+          }}</strong></span
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="lastrow">
+    <div class="recent-post">
+      <span class="inline-category">
+        <mat-icon class="sidebar-icon">message</mat-icon
+        ><strong>Recent Post</strong>
+      </span>
+      <ul class="post-list">
+        <li *ngFor="let data of topRecentPosts">
+          <h3>
+            <a
+              (click)="
+                OpenRecentPostBySelection(data);
+                loaderService.NavigateToSelectedUrl('view-answers')
+              "
+            >
+              <strong>{{ data.Title }}</strong>
+            </a>
+          </h3>
+          <p>
+            {{ data.time_ago }} <a>{{ data.emp_name }}</a>
+          </p>
+          <mat-divider></mat-divider>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lastrow">
+    <div class="top-members">
+      <p class="inline-category">
+        <mat-icon class="sidebar-icon">message</mat-icon
+        ><strong>Top Members</strong>
+      </p>
+      <ul>
+        <li class="top-member-item" *ngFor="let data of topMembers">
+          <div class="content">
+            <img src="assets/users/user-1.jpeg" alt="User Image" />
+            <div class="text">
+              <span>{{ data.emp_name }}</span>
+              <p>{{ data.No_Of_Questions }} Questions</p>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lastrow">
+    <div class="trending-tags">
+      <p class="inline-category">
+        <mat-icon class="sidebar-icon">local_offer</mat-icon
+        ><strong>Trending Tags</strong>
+      </p>
+      <ul>
+        <li><a href="#">discussion</a></li>
+        <li><a href="#">analytics</a></li>
+        <li><a href="#">company</a></li>
+        <li><a href="#">life</a></li>
+        <li><a href="#">computer</a></li>
+        <li><a href="#">interview</a></li>
+        <li><a href="#">grammar</a></li>
+        <li><a href="#">conversion</a></li>
+        <li><a href="#">google</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="container-fluid">
+  <div *ngFor="let question of questionsList" class="card my-3">
+    <div class="question">
+      <h1> {{ question.Title }} </h1>
+
+      <div class="description">
+        <p>{{ question.Description }}</p>
+      </div>
+
+      <div class="top-details">
+        <h5><strong><img src="assets/users/user-1.jpeg" alt="User Image"> <a href="#">{{ question.emp_name }}</a></strong></h5>
+        <h5>Latest Answer: {{ question.time_ago }} </h5>
+        <h5>In: <a href="#"><strong>{{ question.Category_Name }}</strong></a></h5>
+      </div>
+
+      <div class="tags">
+        <p><strong>Tags:</strong> {{ question.Tags.join(', ') }}</p>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div *ngFor="let answer of question.answers" class="answers">
+        <div class="main-content d-flex justify-content-between">
+          <!-- Profile Picture -->
+          <div class="col-md-3 d-flex justify-content-center align-items-center">
+            <div class="profile-picture">
+              <img src="assets/users/user-1.jpeg" alt="User Image">
+
+              <!-- Voting Controls -->
+              <div class="icon-container">
+                <a [routerLink]="'/view-answers'" id="up" (click)="GetVotingCount('Like', answer)">
+                  <mat-icon>thumb_up</mat-icon>
+                </a>
+                <p>{{ answer.Voting_Count }}</p>
+                <a [routerLink]="'/view-answers'" id="down" (click)="GetVotingCount('Dislike', answer)">
+                  <mat-icon>thumb_down</mat-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Answer Description -->
+          <div class="col-md-9 d-flex align-items-center">
+            <div class="answer-description">
+              <p>{{ answer.Answer }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Approve/Unapprove Answer Button -->
+        <div class="approve-answer d-flex justify-content-between">
+          <div class="col-md-3 d-flex justify-content-center align-items-center">
+            <img *ngIf="answer.Approve_Flag === 1" src="assets/check.png" id="tick" alt="Approved">
+          </div>
+
+          <div class="col-md-9 d-flex justify-content-end">
+            <div *ngIf="!answer.Approve_Flag">
+              <a class="btn btn-success" (click)="ApproveCorrectAnswerToQuestion(answer)">Approve Answer</a>
+            </div>
+            <div *ngIf="answer.Approve_Flag">
+              <a class="btn btn-danger" (click)="UnApproveCorrectAnswerToQuestion(answer)">Unapprove Answer</a>
+            </div>
+          </div>
+        </div>
+
+        <mat-divider></mat-divider>
+      </div>
+    </div>
+  </div>
+</div>

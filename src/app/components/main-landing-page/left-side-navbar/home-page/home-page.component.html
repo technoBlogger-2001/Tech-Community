@@ -1,0 +1,22 @@
+<!-- Main content -->
+<div *ngIf="!userProfileService.isUserProfileVisible">
+<!--  <nav aria-label="breadcrumb">-->
+<!--    <ol class="breadcrumb">-->
+<!--      <li class="breadcrumb-item"><a href="#">Home</a></li>-->
+<!--      <li class="breadcrumb-item"><a href="#">Library</a></li>-->
+<!--      <li class="breadcrumb-item active" aria-current="page">Data</li>-->
+<!--    </ol>-->
+<!--  </nav>-->
+
+  <div class="links-container">
+    <a (click)="loaderService.NavigateToSelectedUrl('all-questions'); getQuestionsByType('Recent')"  class="inline-link">Recent Questions</a>
+    <a (click)="getQuestionsByType('Most_Answered'); loaderService.NavigateToSelectedUrl('all-questions')" class="inline-link">Most Answered</a>
+    <a (click)="getQuestionsByType('Unanswered'); loaderService.NavigateToSelectedUrl('all-questions')" class="inline-link">Unanswered Question</a>
+    <a [routerLink]="'/all-questions'" class="inline-link">Featured Question</a>
+  </div>
+</div>
+
+
+
+<!--<div>{{type1}}</div>-->
+<!--<app-all-questions-page [item]="type1"></app-all-questions-page>-->

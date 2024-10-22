@@ -1,0 +1,25 @@
+.links-container {
+  border-bottom: 3px solid orangered;
+  padding-top: 1vw;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inline-link {
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.inline-link:hover {
+  color: whitesmoke;
+  background-color: orangered;
+}
+
+.inline-link:focus {
+  color: whitesmoke;
+  background-color: orangered;
+}

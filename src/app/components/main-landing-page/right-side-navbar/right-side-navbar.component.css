@@ -1,0 +1,317 @@
+.rightsidebar{
+  padding-top: 10vw;
+  z-index: -1;
+}
+
+.lastrow {
+  padding: 1vw;
+  text-align: center;
+  margin-bottom: 1.5vw;
+  border: 1px solid whitesmoke;
+  box-shadow: 10px 10px 5px aliceblue;
+}
+
+.button-box {
+  width: 100%;
+  display: inline-block;
+  /*padding: vw;*/
+
+}
+
+.button {
+  width: 100%;
+  padding: 1vw;
+  text-decoration: none;
+  background-color: orangered;
+  font-weight: bold;
+  border: none;
+  color: white;
+}
+
+.button:hover {
+  background-color: black;
+}
+
+.inline-category {
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-bottom: 1vw;
+  text-align: left !important;
+}
+
+.rightsidebar .mat-icon {
+  vertical-align: -0.5vw;
+  margin-right: 0.5vw;
+  font-size: 1.5rem;
+  color: orangered;
+}
+
+.btn {
+  text-transform: none;
+  width: 100%;
+  padding: 1vw;
+  border: 0.1rem solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgrey;
+  color: black;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.dropdown-icon {
+  color: black!important;
+  margin-left: auto;
+}
+
+.btn:hover,
+.dropdown-icon:hover {
+  background-color: darkgrey!important;
+  color: white!important;
+}
+
+.dropdown-menu.show {
+  width: 100%;
+}
+
+.dropdown-item:hover {
+  color: whitesmoke;
+  background-color: blue;
+}
+
+.discussions {
+  text-align: left;
+  font-size: 1rem;
+}
+
+.custom-list {
+  list-style-type: none;
+  margin-right: 0.1vw;
+}
+
+.custom-item {
+  text-align: left;
+  margin-bottom: 0.1vw;
+  margin-top: 0.5vw;
+}
+
+.custom-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.custom-item a:hover {
+  color: orangered;
+}
+
+.custom-item::marker {
+  font-size: 1.2rem;
+  color: orangered;
+}
+
+/*===========================================>[Dashboard Settings]<===========================================*/
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  background-color: mintcream;
+}
+
+.item {
+  flex: 1 0 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-bottom: 0.2vw;
+  padding-top: 1vw;
+}
+
+.item span {
+  color: darkgray;
+  padding-bottom: 1vw;
+}
+
+.item:nth-child(2) {
+  background-color: linen;
+}
+
+.item:nth-child(3) {
+  background-color: linen;
+}
+
+.item:nth-child(6) {
+  background-color: linen;
+}
+
+.item:nth-child(1) .count {
+  color: blue;
+  font-size: 2vw;
+}
+
+.item:nth-child(2) .count {
+  color: red;
+  font-size: 2vw;
+}
+
+.item:nth-child(3) .count {
+  color: green;
+  font-size: 2vw;
+}
+
+.item:nth-child(4) .count {
+  color: darkgoldenrod;
+  font-size: 2vw;
+}
+
+.item:nth-child(5) .count {
+  color: red;
+  font-size: 2vw;
+}
+
+.item:nth-child(6) .count {
+  color: black;
+  font-size: 2vw;
+}
+
+
+/*===========================================>[Resent Post Settings]<===========================================*/
+
+.recent-post {
+  text-align: left;
+}
+
+.post-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-list li {
+  margin-top: 0.1vw;
+  margin-bottom: 0.2vw;
+}
+
+.post-list li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-list li a:hover {
+  color: orangered;
+}
+
+.post-list li p {
+  color: darkgray;
+}
+
+.post-list li p a {
+  color: orangered;
+}
+
+/*===========================================>[Top Members Settings]<===========================================*/
+
+.top-members ul {
+  text-align: left;
+  padding: 0;
+}
+
+
+.top-member-item {
+  list-style-type: none;
+  margin-top: 1vw;
+  /*display: flex;*/
+  /*align-items: flex-start;*/
+}
+
+.top-member-item .content {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1vw;
+}
+
+.top-member-item img {
+  width: 20%;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 0.5vw;
+}
+
+.top-member-item .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-member-item .text span {
+  font-weight: bold;
+}
+
+.top-member-item .text p {
+  text-align: left;
+  color: orangered;
+  margin: 0;
+}
+
+
+/*===========================================>[Festival Image Settings]<===========================================*/
+
+
+.festival {
+  position: relative;
+}
+
+.festival img {
+  max-width: 100%;
+  height: auto;
+}
+
+.festival a {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  padding: 1vw;
+  color: white;
+  background-color: black;
+  border-radius: 0.5rem;
+  z-index: 9999;
+}
+
+.festival a:hover {
+  background-color: orangered;
+}
+
+
+/*===========================================>[Trending Tags Settings]<===========================================*/
+.trending-tags {
+  text-align: left;
+}
+
+.trending-tags ul {
+  display: inline-block;
+  padding: 0;
+}
+
+.trending-tags ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0.4rem;
+}
+
+.trending-tags ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  border: 0.1rem solid lightgrey;
+  color: black;
+}
+
+.trending-tags ul li a:hover {
+  color: orangered;
+}
+

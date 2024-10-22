@@ -1,0 +1,106 @@
+<app-alert *ngIf="alertService.isQuestionAlertVisible"></app-alert>
+<div class="card">
+  <form [formGroup]="questionForm" (ngSubmit)="submitForm(); alertService.QuestionAddedAlert(); loaderService.NavigateToSelectedUrl('all-questions')">
+<!--    <div class="mb-3">-->
+<!--      <label class="form-label">Title</label>-->
+<!--      <input type="text" class="form-control" formControlName="Question_Title">-->
+<!--      <div *ngIf="questionForm.get('Question_Title')?.invalid && (questionForm.get('Question_Title')?.dirty || questionForm.get('Question_Title')?.touched)" class="text-danger">-->
+<!--        <div *ngIf="questionForm.get('Question_Title')?.errors?.['required']">Title is required.</div>-->
+<!--        <div *ngIf="questionForm.get('Question_Title')?.errors?.['maxlength']">Title cannot exceed 100 characters.</div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="mb-3">-->
+<!--      <label class="form-label">Category</label>-->
+<!--      <mat-select class="form-control" formControlName="Question_Category" placeholder="Select Category">-->
+<!--        <mat-option disabled selected></mat-option>-->
+<!--        <mat-option *ngFor="let category of Categories" [value]="category.Category_Id">{{ category.Category_Name }}</mat-option>-->
+<!--      </mat-select>-->
+<!--      <div *ngIf="questionForm.get('Question_Category')?.invalid && questionForm.get('Question_Category')?.touched" class="text-danger">-->
+<!--        Category is required.-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="mb-3">-->
+<!--      <label class="form-label">Category</label>-->
+<!--      <mat-select class="form-control" formControlName="Question_Category" placeholder="Select Category">-->
+<!--        <mat-option disabled selected></mat-option>-->
+<!--        <mat-option *ngFor="let category of Categories" [value]="category.Category_Id">{{ category.Category_Name }}</mat-option>-->
+<!--      </mat-select>-->
+<!--        <div *ngIf="questionForm.get('Question_Category')?.value === 'Other'">-->
+<!--          <label class="form-label">Other Category</label>-->
+<!--          <input type="text" class="form-control" formControlName="Question_Category">-->
+<!--      </div>-->
+<!--      <div *ngIf="questionForm.get('Question_Category')?.invalid && questionForm.get('Question_Category')?.touched" class="text-danger">-->
+<!--        Category is required.-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+
+    <!--  <div class="mb-3">-->
+    <!--    <label class="form-label">Category</label>-->
+    <!--    <select class="form-control" formControlName="Question_Category">-->
+    <!--      <option disabled selected value="">Select Category</option>-->
+    <!--      <option *ngFor="let category of Categories" [value]="category.Category_Id">{{ category.Category_Name }}</option>-->
+    <!--    </select>-->
+    <!--    <div *ngIf="questionForm.get('Question_Category')?.invalid && questionForm.get('Question_Category')?.touched" class="text-danger">-->
+    <!--      Category is required.-->
+    <!--    </div>-->
+    <!--  </div>-->
+
+
+
+<!--    <div class="mb-3">-->
+<!--      <label class="form-label">Tags (Add up to 5 tags to describe what your question is about)</label>-->
+<!--      <input type="text" class="form-control" formControlName="Question_Tag">-->
+<!--      <div *ngIf="questionForm.get('Question_Tag')?.invalid && (questionForm.get('Question_Tag')?.dirty || questionForm.get('Question_Tag')?.touched)" class="text-danger">-->
+<!--        <div *ngIf="questionForm.get('Question_Tag')?.errors?.['required']">Tags are required.</div>-->
+<!--        <div *ngIf="questionForm.get('Question_Tag')?.errors?.['maxlength']">Tags cannot exceed 50 characters.</div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <ckeditor
+        [config]="ckEditorConfig"
+        [(ngModel)]="ckeditorContent"
+        debounce="500"
+        formControlName="Question_Description"
+      ></ckeditor>
+      <div *ngIf="questionForm.get('Question_Description')?.invalid && (questionForm.get('Question_Description')?.dirty || questionForm.get('Question_Description')?.touched)" class="text-danger">
+        <div *ngIf="questionForm.get('Question_Description')?.errors?.['required']">Description is required.</div>
+        <div *ngIf="questionForm.get('Question_Description')?.errors?.['maxlength']">Description cannot exceed 500 characters.</div>
+      </div>
+    </div>
+
+
+    <div class="mb-3">
+      <div>
+        <div class="attachments">
+          <ul class="list-inline">
+            <li *ngFor="let file of attachments" class="list-inline-item">
+              <span class="badge rounded-pill text-bg-danger"> {{ file.name }} <button type="button" class="btn-close" aria-label="Close" (click)="deleteAttachment(file)"></button> </span>
+            </li>
+          </ul>
+        </div>
+
+
+        <label for="file-upload" class="custom-file-upload" id="upload">
+          <mat-icon class="upload-icon">attachment</mat-icon>
+          <span class="upload-text">Upload Photo</span>
+        </label>
+
+        <input  class="btn" id="file-upload" type="file" multiple (change)="selectAttachments($event)" />
+
+      </div>
+
+
+      <div>
+        <button type="submit" class="btn" id="submit">Submit Question</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+

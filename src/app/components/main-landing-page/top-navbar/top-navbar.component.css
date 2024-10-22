@@ -1,0 +1,111 @@
+.navbar {
+  font-size: 1rem;
+  padding: 2rem;
+  background-color: black !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 10px 10px 5px darkgray;
+}
+
+.container {
+  padding: 0;
+  width: 10rem;
+  height: auto;
+}
+
+
+.container .logo {
+  width: 15rem;
+  height: auto;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.container-fluid img {
+  width: 9rem;
+  height: 2rem;
+}
+
+.container-fluid a {
+  color: white;
+  font-weight: bold;
+}
+
+.container-fluid a.dropdown-item:hover {
+  color: white !important;
+  background-color: blue;
+}
+
+  .d-flex {
+    margin-left: 1rem;
+  }
+
+.nav-item {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  color: white;
+}
+
+.nav-link:hover {
+  color: orangered !important;
+}
+
+.dropdown-item {
+  color: black !important;
+}
+
+.navbar-toggler {
+  color: white !important;
+  /*background-color: orangered !important;*/
+}
+
+.navbar-toggler-icon {
+  color: darkgrey !important;
+  /*background-color: darkgrey!important;*/
+}
+
+.form-control {
+  height: auto;
+}
+
+#search-btn,
+#login-btn,
+#signup-btn {
+  text-transform: none;
+  display: inline-block;
+  width: 6rem;
+  padding: 0.8rem;
+}
+
+#search-btn {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: 1px solid whitesmoke;
+}
+
+#login-btn {
+  background-color: orangered;
+  /*margin-left: 1.5rem;*/
+  color: white;
+  font-weight: bold;
+  border: 1px solid orangered;
+}
+
+#signup-btn {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: 1px solid gray;
+}
+
+#search-btn:hover,
+#signup-btn:hover {
+  background-color: orangered;
+  border-color: orangered;
+}
+

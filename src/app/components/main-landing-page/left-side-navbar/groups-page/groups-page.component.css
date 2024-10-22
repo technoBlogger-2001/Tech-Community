@@ -1,0 +1,95 @@
+.card {
+  margin: 1rem;
+}
+
+.timestamp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 4px 8px;
+  margin: 1rem;
+  border-radius: 4px;
+}
+
+.sub-image,
+.card-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sub-image {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 9.5rem;
+  vertical-align: middle;
+}
+
+.card-title {
+  margin-left: 6rem;
+  margin-bottom: 0;
+}
+
+.card-subtitle {
+  font-size: 0.8rem;
+  margin-left: 6rem;
+  margin-bottom: 1rem;
+  color: darkgray;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+  list-style-type: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.card-body .justify-content-between li span{
+  font-size: 1.2rem;
+}
+
+.card-body .justify-content-between li:first-child {
+  margin-left: 3rem;
+}
+
+.card-body .justify-content-between li:last-child {
+  margin-right: 3rem;
+}
+
+.justify-content-between li h4 {
+  font-size: 1.2rem;
+}
+
+.justify-content-between li span {
+  color: darkgray;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
+/*.sub-image {*/
+/*  margin-bottom: 1rem;*/
+/*}*/
+
+/*.card-title {*/
+/*  margin-left: 1rem;*/
+/*}*/
+
+.btn {
+  margin-top: 1rem;
+  width: 16rem;
+  height: 2.5rem;
+  border-radius: 0;
+  background-color: lightgrey;
+  border: none;
+  color: black;
+}
+
+.btn:hover {
+  background-color: orangered;
+  color: white;
+}
+
